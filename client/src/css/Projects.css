@@ -1,0 +1,78 @@
+.projects {
+  background: linear-gradient(to bottom, rgb(255, 255, 255) 30%, rgb(252, 181, 181) 100%);
+}
+
+/* Contacts Wrapper */
+.con-wrapper {
+  font-family: Arial, sans-serif;
+  color: #1d1d1d;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Projects Section */
+.con-projects-section {
+  margin-bottom: 50px;
+}
+
+.con-projects-heading {
+  padding-bottom: 20px;
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+  z-index: 1;
+  position: relative; /* Ensure content stays above the background */
+}
+
+.recent {
+  color: tomato;
+}
+
+.con-projects-container {
+  display: flex;
+  justify-content: flex-start; /* Align items to the start */
+  align-items: center; /* Vertically center the videos */
+  gap: 15px; /* Adjust spacing between cards */
+  flex-wrap: nowrap; /* Ensure horizontal layout */
+  overflow-x: auto; /* Enable horizontal scrolling */
+  scrollbar-width: none; /* Hide default scrollbar */
+  padding: 0 10px; /* Add some padding to prevent cropping */
+  margin: 0; /* Reset any extra margins */
+}
+
+.con-projects-container::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for webkit browsers */
+}
+
+/* Project Card */
+.con-project-card {
+  width: 200px; /* Smaller width */
+  height: 350px; /* Smaller height */
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  flex-shrink: 0; /* Prevents shrinking */
+}
+
+.con-project-card:hover {
+  transform: scale(1.01);
+}
+
+/* Video Styling */
+.con-project-video {
+  width: 100%;
+  height: 100%;
+  border: none; /* Remove any borders */
+  border-radius: 10px; /* Match the card design */
+  background-color: #fff; /* Optional: Background color */
+}
+
+
+/* Optional styling for a gradient overlay on hover */
+.con-project-card:hover .con-project-video {
+  filter: brightness(100%);
+}

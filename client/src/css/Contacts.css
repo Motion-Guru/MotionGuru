@@ -1,0 +1,135 @@
+/* Call to Action Section */
+.con-cta-section {
+  position: relative;
+  background-color: #f9f9f9;
+  margin: 20px 100px;
+  display: flex;
+  overflow: hidden;
+  z-index: 1;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.con-cta-left {
+  flex: 1;
+  text-align: left;
+}
+
+.con-cta-heading {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #04085f;
+  line-height: 1.2;
+}
+
+.con-cta-right {
+  flex: 1;
+  margin-top: 15px;
+  margin-left: 500px ;
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: flex-start; /* Align items to the left */
+  gap: 10px; /* Add spacing between items */
+}
+
+.con-cta-text {
+  margin: 0px 10px;
+  font-size: 1.4rem;
+  color: #555;
+  margin-bottom: 10px; /* Reduced margin for better spacing */
+  text-align: left; /* Ensure the text is left-aligned */
+}
+
+.con-cta-buttons {
+  display: flex;
+  gap: 20px; /* Space between buttons */
+}
+
+.con-cta-button {
+  margin: 0;
+  background-color: #ff7700;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.con-cta-button:hover {
+  background-color: #0612eb;
+  transform: scale(1.1);
+}
+
+.email-button {
+  background-color: #0612eb;
+}
+
+.email-button:hover {
+  background-color: #ff7700;
+}
+
+/* Background Shapes */
+.background-shapes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0; /* Ensures shapes are behind the text and buttons */
+  pointer-events: none; /* Prevents shapes from blocking interactions */
+}
+
+.shape {
+  position: absolute;
+  opacity: 0.1; /* Makes shapes subtle in the background */
+  animation: float 6s ease-in-out infinite; /* Floating animation for movement */
+}
+
+/* Circle Shape */
+.shape.circle {
+  width: 150px;
+  height: 150px;
+  background-color: #ff7700;
+  border-radius: 50%;
+  top: 20%;
+  left: 10%;
+}
+
+/* Triangle Shape */
+/* Alternate Upside-Down Triangle */
+.shape.triangle {
+  width: 0;
+  height: 0;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-top: 150px solid #0612eb; /* Changes the border to make it point downwards */
+  position: absolute;
+  top: -30%;
+  left: 40%;
+}
+
+
+/* Square Shape */
+.shape.square {
+  width: 120px;
+  height: 120px;
+  background-color: #4caf50;
+  top: 40%;
+  right: 0%;
+}
+
+/* Floating Animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+
